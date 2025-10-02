@@ -61,9 +61,7 @@ export const WithText = (props: PromoProps): JSX.Element => {
     return (
       <div className={`component promo ${props?.params?.styles}`} id={id ? id : undefined}>
         <div className="component-content">
-          <div className="field-promoicon">
-            <JssImage field={props.fields.PromoIcon} />
-          </div>
+          
           <div className="promo-text">
             <div>
               <div className="field-promotext">
@@ -73,6 +71,9 @@ export const WithText = (props: PromoProps): JSX.Element => {
             <div className="field-promotext">
               <JssRichText className="promo-text" field={props.fields.PromoText2} />
             </div>
+          </div>
+          <div className="field-promoicon">
+            <JssImage field={props.fields.PromoIcon} />
           </div>
         </div>
       </div>
