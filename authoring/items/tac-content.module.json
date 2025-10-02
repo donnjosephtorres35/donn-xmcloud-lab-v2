@@ -1,0 +1,20 @@
+{
+  "$schema": "../../.sitecore/schemas/ModuleFile.schema.json",
+  "namespace": "TAC.Events.ContentItems",
+  "references": ["TAC.Events.DevItems"],
+  "items": {
+    "path": "tac-events",
+    "includes": [
+      {
+        "name": "tac-events-media",
+        "path": "/sitecore/Media Library/Project/tac",
+        "allowedPushOperations": "CreateUpdateAndDelete"
+      },
+      {
+        "name": "tac-events-contentRoot",
+        "path": "/sitecore/content/tac",
+        "allowedPushOperations": "CreateUpdateAndDelete"
+      }
+    ]
+  }
+}

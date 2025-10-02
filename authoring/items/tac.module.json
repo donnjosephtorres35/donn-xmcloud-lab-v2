@@ -1,0 +1,75 @@
+{
+  "$schema": "../../.sitecore/schemas/ModuleFile.schema.json",
+  "namespace": "TAC.Events.DevItems",
+  "items": {
+    "path": "tac-events",
+    "includes": [
+      {
+        "name": "tac-events-templates",
+        "path": "/sitecore/Templates",
+        "allowedPushOperations": "CreateUpdateAndDelete",
+        "rules": [
+          {
+            "path": "/Project/tac",
+            "scope": "ItemAndDescendants",
+            "allowedPushOperations": "CreateUpdateAndDelete"
+          },
+          {
+            "path": "/Project",
+            "scope": "SingleItem"
+          },
+          {
+            "path": "/Feature/tac",
+            "scope": "ItemAndDescendants",
+            "allowedPushOperations": "CreateUpdateAndDelete"
+          },
+          {
+            "path": "/Feature",
+            "scope": "SingleItem"
+          },
+          {
+            "path": "*",
+            "scope": "ignored"
+          }
+        ]
+      },
+      {
+        "name": "tac-events-placeholders",
+        "path": "/sitecore/layout/Placeholder Settings",
+        "allowedPushOperations": "CreateUpdateAndDelete",
+        "rules": [
+          {
+            "path": "/Project/tac",
+            "scope": "ItemAndDescendants"
+          },
+          {
+            "path": "/Project",
+            "scope": "SingleItem"
+          },
+          {
+            "path": "/Feature/tac",
+            "scope": "ItemAndDescendants"
+          },
+          {
+            "path": "/Feature",
+            "scope": "SingleItem"
+          },
+          {
+            "path": "*",
+            "scope": "ignored"
+          }
+        ]
+      },
+      {
+        "name": "tac-events-renderings",
+        "path": "/sitecore/layout/Renderings/Project/tac",
+        "allowedPushOperations": "CreateUpdateAndDelete"
+      },
+      {
+        "name": "tac-events-workflows",
+        "path": "/sitecore/system/Workflows/Event Approval Workflow",
+        "allowedPushOperations": "CreateUpdateAndDelete"
+      }
+    ]
+  }
+}
